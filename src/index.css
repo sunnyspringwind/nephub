@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* Custom styles go here */
+/* @keyframes wave {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.wavy-background {
+    background: linear-gradient(135deg, #84fab0, #8fd3f4);
+    background-size: 300% 300%;
+    animation: wave 5s ease infinite;
+} */
+
+@keyframes sway {
+ 
+        0%, 100%{ transform: rotate(0deg); }
+        25%{transform: rotate(-5deg);}
+        75%{ transform: rotate(5deg); }
+}
+
+.floating-banner {
+    animation: sway 6s infinite;
+    transform-origin: 50% 100% 0;
+}
+
+.hover-floating-banner:hover{
+    animation: sway 6s infinite;
+    transform-origin: 50% 100% 0;
+
+}
+
+
+/* @-webkit-keyframes swinging{
+    0%{-webkit-transform: rotate(10deg);}
+    50%{-webkit-transform: rotate(-5deg)}
+    100%{-webkit-transform: rotate(10deg);}
+}
+ 
+@keyframes swinging{
+    0%{transform: rotate(10deg);}
+    50%{transform: rotate(-5deg)}
+    100%{transform: rotate(10deg);}
+}
+ 
+.swingimage{
+    -webkit-transform-origin: 50% 0;
+    transform-origin: 50% 0;
+    -webkit-animation: swinging 3.5s ease-in-out forwards infinite;
+    animation: swinging 3.5s ease-in-out forwards infinite;
+} */
