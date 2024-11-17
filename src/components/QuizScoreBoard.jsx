@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 // show scoreboard after quiz complete
-const ScoreBoard = ({ pointsTable, quizUrl }) => {
+const ScoreBoard = ({ pointsTable, tryAgain}) => {
     return (
         <div className="fixed top-0 left-0 w-full h-full flex justify-center items-center bg-black bg-opacity-50">
             <div className="bg-white p-8 rounded-lg shadow-lg text-center">
@@ -12,11 +12,9 @@ const ScoreBoard = ({ pointsTable, quizUrl }) => {
                     Incorrect Answers: <span className="text-red-500">{pointsTable.current.incorrect}</span>
                 </p>
                 <div className="grid grid-cols-2 gap-7">
-                    <Link to={quizUrl}>
-                        <button className="bg-red-400 text-white rounded-md hover:bg-red-600 p-4 transition-colors">
+                        <button className="bg-red-400 text-white rounded-md hover:bg-red-600 p-4 transition-colors" onClick={()=> tryAgain()}>
                             Try Again
                         </button>
-                    </Link>
                     <Link to={"/quizzes"}>
                         <button className="bg-blue-400 text-white rounded-md hover:bg-blue-600 p-4 transition-colors">
                             Quizzes Library

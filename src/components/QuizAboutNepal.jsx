@@ -79,6 +79,16 @@ const QuizAboutNepal = () => {
     questionRefs.current[refIndex].classList.toggle("hidden");
   };
 
+  const tryAgain = () =>{
+    //reset result visibility and points value and toggle hidden class off
+    setIsResultVisible(false);
+    pointsTableRef.current.correct = 0;
+    pointsTableRef.current.incorrect = 0;
+    questionRefs.current.map(question=>{
+     question.classList.toggle("hidden");
+    })
+  }
+
   const displayResult = () => {
     if (pointsTableRef.current.correct + pointsTableRef.current.incorrect == 10)
       setIsResultVisible(true);
@@ -119,7 +129,7 @@ const QuizAboutNepal = () => {
           </div>
         </div>
       ))}
-      {isResultVisble && <ScoreBoard pointsTable={pointsTableRef} quizUrl={"/quizzes/about-nepal"} />}
+      {isResultVisble && <ScoreBoard pointsTable={pointsTableRef} tryAgain={tryAgain}/>}
     </div>
   );
 };

@@ -6,29 +6,34 @@ import Footer from "./Footer";
 const LandingPage = () => {
   return (
  
-      <div className="fixed w-full h-full bg-[#F6F1ED]">
+      <div className="min-h-screen bg-[#F6F1ED]">
       <Header />
-        <ul className="flex justify-center mx-12 pt-10">
-          <li>
+        <ul className=" flex mt-10 flex-wrap justify-center items-center sm:justify-evenly">
+          <li className="mb-10">
             <Link to="/timeline">
               <LiveBgButtonDesign name="Timeline of Nepal" bgvideo="gCRNEJxDJKM" />
             </Link>
           </li>
-          <li>
+          <li className="mb-10">
             <Link to="/rankings-nepal">
               <LiveBgButtonDesign name="Top Figures of Nepal" bgvideo="mHD-fS6TtoM" />
             </Link>
           </li>
-          <li>
+          <li className="mb-10">
             <Link to="/quizzes">
             <LiveBgButtonDesign name="Quizzes" bgvideo="kfXy4W0aD40" />
             </Link>
           </li>
-          <li>
+          <li className="mb-10">
+          <Link to="/update-requests">
+            <LiveBgButtonDesign name="Update Requests" bgvideo="kfXy4W0aD40" />
+            </Link>
+          </li>
+          <li className="mb-10">
             <LiveBgButtonDesign name="to-do" bgvideo="kfXy4W0aD40" />
           </li>
         </ul>
-    <div className="absolute w-full bottom-0">    <Footer/></div>
+    <div className="w-full bottom-0 lg:fixed">    <Footer/></div>
       </div>
   );
 };

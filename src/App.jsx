@@ -9,6 +9,7 @@ import PrimeMinisters from "./components/PrimeMinistersPage";
 import QuizLibrary from "./components/QuizLibarary";
 import QuizAboutNepal from "./components/QuizAboutNepal";
 import QuizAboutRichest from "./components/QuizAboutRichest";
+import UpdateRequests from "./components/UpdateRequests";
 
 export default function App () {
 
@@ -27,6 +28,8 @@ export default function App () {
             <Route path="/quizzes" element={<QuizLibrary/>}/>
             <Route path="/quizzes/about-nepal" element={<QuizAboutNepal/>}/>
             <Route path="/quizzes/about-richest" element={<QuizAboutRichest/>}/>
+            <Route path="/update-requests" element={<UpdateRequests/>}/>
+
         </Routes>
         </BrowserRouter>
         </>

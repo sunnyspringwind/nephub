@@ -5,30 +5,29 @@ import LiveBgButtonDesign from "../utils/LiveBgButtonDesign";
 import Footer from "./Footer";
 const QuizLibrary = () => {
   return (
-      <div className="fixed w-full h-full bg-[#F6F1ED]">
+      <div className="min-h-screen bg-[#F6F1ED]">
       <Header />
-        <ul className="flex justify-center mx-12 pt-10">
-          <li>
+        <ul className=" flex mt-10 flex-wrap justify-center items-center sm:justify-evenly">
+          <li className="mb-10">
             <Link to="/quizzes/about-nepal">
               <LiveBgButtonDesign name="Do you love NEPAL if yes answer this?" bgvideo="gCRNEJxDJKM" />
             </Link>
           </li>
-          <li>
+          <li className="mb-10">
             <Link to="/quizzes/about-richest">
               <LiveBgButtonDesign name="Know the rich to be the Rich?" bgvideo="mHD-fS6TtoM" />
             </Link>
           </li>
-          <li>
+          <li className="mb-10">
             <Link to="/quizzes">
             <LiveBgButtonDesign name="Quizzes" bgvideo="kfXy4W0aD40" />
             </Link>
           </li>
-          <li>
+          <li className="mb-10">
             <LiveBgButtonDesign name="to-do" bgvideo="kfXy4W0aD40" />
           </li>
         </ul>
-        <div className="absolute w-full bottom-0">    <Footer/></div>
-
+        <div className="w-full bottom-0 sm:fixed"><Footer/></div>
       </div>
   );
 };

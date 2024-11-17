@@ -60,15 +60,27 @@ const QuizAboutRichest = () => {
   const questionRefs = useRef([]);
   const [isResultVisble, setIsResultVisible] = useState(false);
 
+
   //hides the question after answered
   const unmountQuestion = (refIndex) => {
     questionRefs.current[refIndex].classList.toggle("hidden");
   };
 
+  const tryAgain = () =>{
+    //reset result visibility and points value and toggle hidden class off
+    setIsResultVisible(false);
+    pointsTableRef.current.correct = 0;
+    pointsTableRef.current.incorrect = 0;
+    questionRefs.current.map(question=>{
+     question.classList.toggle("hidden");
+    })
+  }
+
   const displayResult = () => {
     if (pointsTableRef.current.correct + pointsTableRef.current.incorrect == 10)
       setIsResultVisible(true);
   };
+
 
   return (
     <div className="p-6 bg-gray-100 flex flex-col items-center">
@@ -105,7 +117,7 @@ const QuizAboutRichest = () => {
           </div>
         </div>
       ))}
-      {isResultVisble && <ScoreBoard pointsTable={pointsTableRef} quizUrl={"/quizzes/about-richest"} />}
+      {isResultVisble && <ScoreBoard pointsTable={pointsTableRef} tryAgain={tryAgain}/>}
     </div>
   );
 };
