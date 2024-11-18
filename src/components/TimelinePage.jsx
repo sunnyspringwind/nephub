@@ -1,7 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import thePath from "../assets/thePath3.png";
-import timemachine from "../assets/timeboi.png";
-import roadend from "../assets/underConstruction1.png";
+
 import Header from "./Header";
 import Footer from "./Footer";
 
