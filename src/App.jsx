@@ -10,7 +10,9 @@ import QuizLibrary from "./components/QuizLibarary";
 import QuizAboutNepal from "./components/QuizAboutNepal";
 import QuizAboutRichest from "./components/QuizAboutRichest";
 import UpdateRequests from "./components/UpdateRequests";
-import User from "./components/User";
+import Register from "./components/Register";
+import Login from "./components/Login";
+import UserDashboard from "./components/UserDashboard";
 
 export default function App () {
 
@@ -30,7 +32,10 @@ export default function App () {
             <Route path="/quizzes/about-nepal" element={<QuizAboutNepal/>}/>
             <Route path="/quizzes/about-richest" element={<QuizAboutRichest/>}/>
             <Route path="/update-requests" element={<UpdateRequests/>}/>
-            <Route path="/user" element={<User/>}/>
+            <Route path="/user-dashboard" element={<UserDashboard/>}/>
+            <Route path="/login" element={<Login/>}/>
+            <Route path="/register" element={<Register/>}/>
+
 
         </Routes>
         </BrowserRouter>
